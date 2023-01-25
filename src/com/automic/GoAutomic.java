@@ -39,7 +39,7 @@ public class GoAutomic {
 	public static String AEUserLogin = "UC4"; 				// AE User Login
 	public static String AEUserPassword = "uc4"; 			// AE User Password
 	public static char AEMessageLanguage = 'E'; 			// Language: 'E' or 'D', or 'F'
-	
+	public static String AETrustedCertFolder = "C:\\Automic\\Automation.Platform\\Agents\\certificates";  // TrustedCert Folder for TLS 	
 	
 	
 		public static void main(String argv[]) throws IOException {

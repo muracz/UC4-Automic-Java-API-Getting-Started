@@ -13,8 +13,12 @@ public class ConnectionManager {
 		
 	}
 	
-	public Connection authenticate(String AEHost, int AEPort, int AEClient, String AELogin, String AEDep, String AEPwd, char AELanguage) throws IOException{
+	public Connection authenticate(String AEHost, int AEPort, int AEClient, String AELogin, String AEDep, String AEPwd, char AELanguage,  String AETrustedCertFolder) throws IOException{
 		
+		// If necessary set the TrustedCert Folder
+		if (AETrustedCertFolder != "") { 
+			Connection.setTrustedCertFolderPath(AETrustedCertFolder);
+		}
 		System.out.println("Authentication...");
 		conn = Connection.open(AEHost, AEPort);
 		CreateSession sess = conn.login(AEClient, AELogin, AEDep, AEPwd, AELanguage);
