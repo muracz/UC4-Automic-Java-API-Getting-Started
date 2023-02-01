@@ -47,7 +47,7 @@ public class GoAutomic {
 			// 1- First, use the static connection object to initiate the connection (see ConnectionManager class for details)
 			
 			Connection conn = new ConnectionManager().authenticate(
-					AEHostnameOrIp, AECPPort, AEClientToConnect, AEUserLogin, AEDepartment, AEUserPassword, AEMessageLanguage);
+					AEHostnameOrIp, AECPPort, AEClientToConnect, AEUserLogin, AEDepartment, AEUserPassword, AEMessageLanguage,AETrustedCertFolder);
 			
 			// 2- Use the connection object created above to query AE
 			// -> the Utils class aims at bringing additional functionalities to the AE API, take a look!
